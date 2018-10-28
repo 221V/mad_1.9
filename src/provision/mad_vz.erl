@@ -1,5 +1,5 @@
 -module(mad_vz).
--compile(export_all).
+-compile([export_all, nowarn_export_all]).
 
 create(App,_) -> create(App).
 create(App) ->
@@ -19,7 +19,7 @@ start(App) ->
     mad:info("Oneliner: ~p~n",[Concat]),
     {ret(R),S}.
 
-stop(App) -> ok.
+stop(_App) -> ok.
 
 ret(0) -> ok;
 ret(_) -> error.

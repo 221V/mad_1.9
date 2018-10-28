@@ -1,7 +1,7 @@
 -module(mad).
 -copyright('Maxim Sokhatsky').
 -include("mad.hrl").
--compile(export_all).
+-compile([export_all, nowarn_export_all]).
 -export([main/1]).
 
 main([])          -> help();
@@ -17,7 +17,7 @@ main(Params)      ->
            lists:flatten(
            lists:foldl(
                  fun ({Fun,Arg},[])  -> errors((profile()):Fun(Arg));
-                     ({Fun,Arg},Err) -> errors(Invalid),
+                     ({_Fun,_Arg},Err) -> errors(Invalid),
                                         { return, Err } end,
                  [], Valid)))).
 
@@ -56,7 +56,7 @@ info(Format)      -> io:format(lists:concat([Format,"\r"])).
 info(Format,Args) -> io:format(lists:concat([Format,"\r"]),Args).
 
 help(Reason,D)    -> help(io_lib:format("~s ~p", [Reason, D])).
-help(Msg)         -> help().
+help(_Msg)         -> help().
 help()            -> info("MAD Container Tool version ~s~n",[?VERSION]),
                      info("~n"),
                      info("    invoke = mad params~n"),

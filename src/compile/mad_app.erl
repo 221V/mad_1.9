@@ -1,6 +1,6 @@
 -module(mad_app).
 -copyright('Sina Samavati').
--compile(export_all).
+-compile([export_all, nowarn_export_all]).
 
 app_src_to_app(Filename) -> filename:basename(Filename, ".app.src") ++ ".app".
 

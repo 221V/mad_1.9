@@ -1,5 +1,5 @@
 -module(mad_release).
--compile(export_all).
+-compile([export_all, nowarn_export_all]).
 
 release([])              -> release(["script"]);
 release(["depot"])       -> release(["depot", "sample"]);

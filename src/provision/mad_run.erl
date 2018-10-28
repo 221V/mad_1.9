@@ -1,5 +1,5 @@
 -module(mad_run).
--compile(export_all).
+-compile([export_all, nowarn_export_all]).
 
 start(App) ->                            % run_dir > < log_dir
     mad:info("Scripting: ~p~n",[escript:script_name()]),

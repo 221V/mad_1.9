@@ -1,6 +1,6 @@
 -module(mad_dtl).
 -copyright('Sina Samavati').
--compile(export_all).
+-compile([export_all, nowarn_export_all]).
 
 compile(Dir,Config) ->
     case mad_utils:get_value(erlydtl_opts, Config, []) of

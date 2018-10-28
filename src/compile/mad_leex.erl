@@ -1,6 +1,6 @@
 -module(mad_leex).
 -copyright('Sina Samavati').
--compile(export_all).
+-compile([export_all, nowarn_export_all]).
 
 xrl_to_erl(F) -> filename:join(filename:dirname(F),filename:basename(F, ".xrl")) ++ ".erl".
 

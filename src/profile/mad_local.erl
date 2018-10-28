@@ -1,5 +1,5 @@
 -module(mad_local).
--compile(export_all).
+-compile([export_all, nowarn_export_all]).
 
 compile(Params)   -> mad_compile:compile(Params).
 app(Params)       -> mad_static:app(Params).

@@ -1,6 +1,6 @@
 -module(mad_script).
 -copyright('Sina Samavati').
--compile(export_all).
+-compile([export_all, nowarn_export_all]).
 
 script(ConfigFile, Conf, _) ->
     File = ConfigFile ++ ".script",

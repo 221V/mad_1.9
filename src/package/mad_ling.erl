@@ -1,7 +1,7 @@
 -module(mad_ling).
 -description("LING Erlang Virtual Machine Bundle Packaging").
 -copyright('Cloudozer, LLP').
--compile(export_all).
+-compile([export_all, nowarn_export_all]).
 -define(ARCH, list_to_atom( case os:getenv("ARCH") of false -> "posix"; A -> A end)).
 
 ling(Params) ->

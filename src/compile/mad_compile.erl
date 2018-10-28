@@ -1,6 +1,6 @@
 -module(mad_compile).
 -copyright('Sina Samavati').
--compile(export_all).
+-compile([export_all, nowarn_export_all]).
 
 compile(Params) ->
     { Cwd, ConfigFile, Conf } = mad_utils:configs(),

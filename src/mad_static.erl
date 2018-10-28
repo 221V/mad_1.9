@@ -1,6 +1,6 @@
 -module(mad_static).
 -copyright('Yuri Artemev').
--compile(export_all).
+-compile([export_all, nowarn_export_all]).
 -define(NODE(Bin), "node_modules/.bin/"++Bin).
 
 main(Config, ["watch"]) ->

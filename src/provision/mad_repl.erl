@@ -1,6 +1,6 @@
 -module(mad_repl).
 -copyright('Maxim Sokhatsky').
--compile(export_all).
+-compile([export_all, nowarn_export_all]).
 
 disabled() -> [].
 system() -> [compiler,syntax_tools,sasl,tools,mnesia,reltool,xmerl,crypto,kernel,stdlib,ssh,eldap,

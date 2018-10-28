@@ -1,6 +1,6 @@
 -module(mad_utils).
 -copyright('Sina Samavati').
--compile(export_all).
+-compile([export_all, nowarn_export_all]).
 
 %% internal
 name_and_repo({Name, _, Repo}) when is_list(Name) -> {Name, Repo};
